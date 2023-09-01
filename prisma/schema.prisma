@@ -3,18 +3,32 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
 model Profile {
-  id String @id @default(uuid())
-  userId String @unique
-  name String
+  id       String @id @default(uuid())
+  userId   String @unique
+  name     String
   imageUrl String @db.Text
-  email String @db.Text
-  
+  email    String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Limits {
+  id           String @id @default(uuid())
+  dailyLimit   String
+  monthlyLimit String
+}
+
+model Amount {
+  id     String @id @default(uuid())
+  amount String
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

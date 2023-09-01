@@ -25,8 +25,13 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(font.className)} >
-          <ThemeProvider attribute="class" defaultTheme="dark"  enableSystem={false} storageKey="expense">
+        <body className={cn(font.className, "bg-white dark:bg-gray-800")}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem={false}
+            storageKey="expense"
+          >
             {children}
           </ThemeProvider>
         </body>

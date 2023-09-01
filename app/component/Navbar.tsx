@@ -5,9 +5,11 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className=" w-full flex justify-between px-6 py-3">
-      <div></div>
-      <div className="flex gap-4" >
-        <ModeToggle  />
+      <div className="w-max h-full flex justify-center items-center font-semibold text-xl">
+        Expense Tracker App
+      </div>
+      <div className="flex gap-4">
+        <ModeToggle />
         <UserButton
           appearance={{
             elements: {
