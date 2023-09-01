@@ -4,8 +4,8 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className=" w-full flex justify-between px-6 py-3">
-      <div className="w-max h-full flex justify-center items-center font-semibold text-xl">
+    <div className=" w-full flex justify-between px-10 py-3 bg-gray-300 ">
+      <div className="w-max font-semibold text-[23px]">
         Expense Tracker App
       </div>
       <div className="flex gap-4">
